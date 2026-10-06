@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maxxy Services Co. — Beauty Studio</title>
+<meta name="description" content="A warm, unhurried beauty studio for hair, skin, nails and spa. Book your visit online.">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.hero-visual{overflow:hidden;height:420px;border-radius:24px}
+.marquee-vertical{height:100%;overflow:hidden}
+.marquee-track{display:flex;flex-direction:column;gap:15px;animation:scrollUp 20s linear infinite}
+.marquee-track img{width:100%;height:200px;object-fit:cover;border-radius:16px}
+@keyframes scrollUp{0%{transform:translateY(0)}100%{transform:translateY(-50%)}}
+.g-block{background-size:cover!important;background-position:center!important}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">Maxxy <em>Services</em> Co.</a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="booking.html" class="btn btn-primary" style="padding:11px 22px;">Book a visit</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="nav-mobile">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="booking.html">Book a visit</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <span class="tag">Open Mon – Sat</span>
+      <h1>Slow down.<br><i>Glow</i> up.</h1>
+      <p>A neighbourhood studio for hair, skin, nails and spa — unhurried appointments, skilled hands, and a cup of something warm while you wait.</p>
+      <div class="hero-actions">
+        <a href="booking.html" class="btn btn-primary">Book a visit</a>
+        <a href="services.html" class="btn btn-ghost-light">View the menu</a>
+      </div>
+      <div class="hero-note"><strong>4.9 / 5</strong> from 300+ regulars, mostly by word of mouth</div>
+    </div>
+    <div class="hero-visual">
+      <div class="marquee-vertical">
+
+    </div>
+  </div>
+</section>
+
+<!-- KEEP YOUR REST SECTIONS SAME AS BEFORE -->
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand"><a href="index.html" class="brand">Maxxy <em>Services</em> Co.</a><p>A neighbourhood beauty studio for hair, skin, nails and spa</p></div>
+      <div class="footer-col"><h4>Explore</h4><a href="services.html">Services</a><a href="booking.html">Booking</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+      <div class="footer-col"><h4>Studio hours</h4><p>Mon – Sat: 9am – 7pm</p><p>Sun CLOSED</p></div>
+      <div class="footer-col"><h4>Visit</h4><p>14 Marigold Lane<br>Nairobi</p><p>+254 797212907</p><p>oirigagilbert05@gmail.com</p></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Maxxy. Beauty Studio.</span></div>
+  </div>
+</footer>
+
+<script>
+// FIXED NAV - ONLY ONE
+document.addEventListener('DOMContentLoaded', function () {
+  var toggle = document.querySelector('.nav-toggle');
+  var mobile = document.querySelector('.nav-mobile');
+  if (toggle && mobile) {
+    toggle.addEventListener('click', function () {
+      mobile.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', mobile.classList.contains('open'));
+    });
+    mobile.querySelectorAll('a').forEach(a=>{
+      a.addEventListener('click', ()=>{
+        mobile.classList.remove('open');
+        toggle.setAttribute('aria-expanded','false');
+      });
+    });
+  }
+});
+</script>
+</body>
+</html>
